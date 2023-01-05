@@ -111,3 +111,6 @@ Primary.parameters = {
         ]
     }
 }
+Primary.argTypes = {
+    color:{control:'color'}
+}
