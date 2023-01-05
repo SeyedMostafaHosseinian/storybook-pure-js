@@ -1,4 +1,5 @@
 import {Component1} from "./Component1";
+import {Meta, Story} from "@storybook/html";
 
 export default {
     title: "components/Component1",
@@ -86,7 +87,7 @@ export default {
             return decorator
         }
     ]
-};
+} as Meta<Component1>
 
 const Template = (args) => Component1(args);
 

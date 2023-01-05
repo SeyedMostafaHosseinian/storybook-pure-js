@@ -8,11 +8,12 @@ export const parameters = {
     },
 
 }
+
 export const argTypes = {
-    exampleProperty1: {control: 'text', table: { category:"global"}},
-    exampleProperty2: {control: 'text', table: { category:"global"}},
-    exampleProperty3: {control: 'text', table: { category:"global"}},
-    exampleProperty4: {control: 'text', table: { category:"global"}},
+    exampleGlobalProperty1: {control: 'text', table: { category:"global"}},
+    exampleGlobalProperty2: {control: 'text', table: { category:"global"}},
+    exampleGlobalProperty3: {control: 'text', table: { category:"global"}},
+    exampleGlobalProperty4: {control: 'text', table: { category:"global"}},
 }
 export const args = {
     globalArg1:"1",
