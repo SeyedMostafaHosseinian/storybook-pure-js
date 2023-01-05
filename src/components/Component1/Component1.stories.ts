@@ -1,7 +1,7 @@
 import {Component1} from "./Component1";
 
 export default {
-    title: "my-component",
+    title: "components/Component1",
     argTypes: {
         width: {
             control: {type: "range", min: 140, max: 600, step: 10},
@@ -41,7 +41,7 @@ export default {
         backgroundColor: {
             control: "color",
             table: {
-                // category: 'color'
+                category: 'color'
             },
 
         },
@@ -49,7 +49,7 @@ export default {
             control: "color",
             table: {
                 category: 'color',
-                subcategory: "example-subcategory-color"
+                // subcategory: "example-subcategory-color"
             }
         },
         title: {
@@ -68,7 +68,24 @@ export default {
             action: 'onClick',
 
         }
-    }
+    },
+    parameters: {
+        backgrounds: {
+            values: [
+                {name: 'red', value: '#f00'},
+                {name: 'green', value: '#0f0'},
+                {name: 'blue', value: '#00f'},
+            ]
+        }
+    },
+    decorators: [
+        (story) => {
+            const decorator = document.createElement('div')
+            decorator.style.padding = '100px'
+            decorator.appendChild(story())
+            return decorator
+        }
+    ]
 };
 
 const Template = (args) => Component1(args);
@@ -82,6 +99,15 @@ Primary.args = {
     padding: 15,
     borderRadius: 5,
     title: "component-1",
-    descriptions: "this is the description for lorem",
+    descriptions: "this is the description from lorem",
 
 };
+Primary.parameters = {
+    backgrounds: {
+        values:[
+            {name:'color1', value:'#eee'},
+            {name:'color2', value:'#e2e'},
+            {name:'color3', value:'#444'},
+        ]
+    }
+}

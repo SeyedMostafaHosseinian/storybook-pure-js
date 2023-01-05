@@ -17,7 +17,7 @@ export const Component1 = (options: {
 
     componentElement.setAttribute('style', `
         width:${options.width}px;
-        height:${options.width}px;
+        height:${options.height}px;
         background-color:${options.backgroundColor};
         padding:${options.padding}px;
         border-radius:${options.borderRadius}px;
