@@ -87,7 +87,7 @@ export default {
             return decorator
         }
     ]
-} as Meta<Component1>
+}
 
 const Template = (args) => Component1(args);
 
@@ -99,8 +99,8 @@ Primary.args = {
     color: "#333",
     padding: 15,
     borderRadius: 5,
-    title: "component-1",
-    descriptions: "this is the description from lorem",
+    title: "component",
+    descriptions: "this is a description for this component🤫😄 ",
 
 };
 Primary.parameters = {
